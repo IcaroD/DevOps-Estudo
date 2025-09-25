@@ -3,9 +3,6 @@
 ## 1. [[Fundamentos do Linux]]
 - Navegação: `ls`, `cd`, `pwd`
 - Manipulação de arquivos: `touch`, `rm`, `mv`, `cp`, `cat`, `less`, `head`, `tail`
-- Permissões: `chmod`, `chown`, `groups`
-- Usuários: `whoami`, `id`, `usermod`
-- Editores: aprender `nano` e `vim`
 
 ---
 

@@ -11,50 +11,31 @@ Comandos básicos para se mover entre diretórios e manipular arquivos:
 - `rm arquivo.txt` → remove arquivo
 -  `cp arquivo1.txt arquivo2.txt` → copia arquivo
 - `mv origem destino` → move arquivo para pasta
+- `tail arquivo.log` → mostra as últimas linhas de um arquivo
+- `cat arquivo.txt` → mostra o conteúdo de arquivos
+- `head arquivo.log` → mostra o primeiras linhas de arquivos
 
 ---
 
-## 2. Permissões e usuários
-Cada arquivo/diretório tem permissões para:
-- **Usuário (owner)**
-- **Grupo (group)**
-- **Outros (others)**
+## 2. Flags no Linux
 
-Exemplo com `ls -l`:
-```bash
--rwxr-xr-- 1 usuario devops 1200 set 24 10:20 script.sh
-```
-- `r` = leitura, `w` = escrita, `x` = execução
-- `usuario` = dono do arquivo
-- `devops` = grupo
+As **flags** personalizam o comportamento dos comandos.  
+- Podem ser **curtas** (`-a`, `-l`, `-r`) ou **longas** (`--all`, `--help`).  
+- Muitas vezes a letra é uma **abreviação da função** (ex.: `-r` = *recursive*, `-l` = *list*).  
+- É comum combinar várias flags curtas: `ls -alh` = `ls -a -l -h`.
 
-Comandos úteis:
-- `chmod [permissão] arquivo` → define permissões
-- `chown usuario arquivo.txt` → muda o dono
-- `chgrp grupo arquivo.txt` → muda o grupo
-- `whoami` → mostra usuário atual
-- `id` → mostra UID, GID e grupos
+Tabela resumida de flags comuns:
 
-Permissões:
-
-| Número | Binário | Permissões | Significado                 |
-| ------ | ------- | ---------- | --------------------------- |
-| 0      | 000     | ---        | Sem permissão               |
-| 1      | 001     | --x        | Somente execução            |
-| 2      | 010     | -w-        | Somente escrita             |
-| 3      | 011     | -wx        | Escrita e execução          |
-| 4      | 100     | r--        | Somente leitura             |
-| 5      | 101     | r-x        | Leitura e execução          |
-| 6      | 110     | rw-        | Leitura e escrita           |
-| 7      | 111     | rwx        | Leitura, escrita e execução |
-
-Exemplos práticos de `chmod`:
-
-| Comando | Significado |
-|---------|-------------|
-| `chmod 755 arquivo` | Dono: rwx, Grupo: r-x, Outros: r-x |
-| `chmod 644 arquivo` | Dono: rw-, Grupo: r--, Outros: r-- |
-| `chmod 700 arquivo` | Dono: rwx, Grupo: --- , Outros: --- |
-| `chmod 600 arquivo` | Dono: rw-, Grupo: --- , Outros: --- |
-| `chmod 777 arquivo` | Todos podem ler, escrever e executar (cuidado!) |
-
+| Flag | Palavra (Inglês)       | Função / Significado                          | Exemplo |
+|------|------------------------|-----------------------------------------------|---------|
+| `-a` | all                    | Mostra todos arquivos, inclusive ocultos      | `ls -a` |
+| `-l` | list                   | Lista detalhada (permissões, dono, tamanho)  | `ls -l` |
+| `-h` | human-readable         | Tamanhos legíveis (KB, MB, GB)               | `ls -lh` |
+| `-R` | recursive              | Aplica a ação em subdiretórios                | `ls -R` |
+| `-r` | recursive              | Copia, remove ou aplica recursivamente       | `rm -r pasta/` |
+| `-f` | force                  | Força execução sem pedir confirmação         | `rm -rf pasta/` |
+| `-v` | verbose                | Mostra detalhes do que está acontecendo     | `cp -rv pasta1 pasta2` |
+| `-n` | number                 | Numera linhas ou define quantidade           | `head -n 5 arquivo.txt` |
+| `-c` | count                  | Define quantidade de execuções ou pacotes    | `ping -c 4 google.com` |
+| `-p` | parents                | Cria diretórios pai automaticamente          | `mkdir -p projeto/src` |
+| `-f` | follow                 | Acompanha arquivo em tempo real              | `tail -f arquivo.log` |
