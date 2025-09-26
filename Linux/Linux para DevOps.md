@@ -2,26 +2,26 @@
 
 ## 1. [[Fundamentos do Linux]]
 - Navegação: `ls`, `cd`, `pwd`
-- Manipulação de arquivos: `touch`, `rm`, `mv`, `cp`, `cat`, `less`, `head`, `tail`
+- Manipulação de arquivos: `touch`, `rm`, `mv`, `cp`, `cat`, `less`, `head`, `tail`, `grep`
 
 ---
 
-## 2. [[Gerenciamento do sistema]]
-- Pacotes: `apt`, `yum`, `dnf`, `snap`
-- Processos: `ps`, `top`, `htop`, `kill`, `killall`
-- Serviços: `systemctl`, `service`
-- Monitoramento: `df -h`, `du -sh`, `free -h`, `uptime`
-- Logs: `journalctl`, diretório `/var/log/`
-
----
-
-## 3. [[Shell Scripting]]
+## 2. [[Shell Scripting]]
 - Criar scripts em `bash`
 - Variáveis: `VAR=value`, `$VAR`
 - Estruturas de controle: `if`, `for`, `while`, `case`
 - Entrada/saída: `read`, `echo`
 - Redirecionamentos: `>`, `>>`, `<`, `|`
 - Automação de tarefas (backup, limpeza de logs, deploy simples)
+
+---
+
+## 3. [[Gerenciamento do sistema]]
+- Pacotes: `apt`, `yum`, `dnf`, `snap`
+- Processos: `ps`, `top`, `htop`, `kill`, `killall`
+- Serviços: `systemctl`, `service`
+- Monitoramento: `df -h`, `du -sh`, `free -h`, `uptime`
+- Logs: `journalctl`, diretório `/var/log/`
 
 ---
 
