@@ -34,28 +34,10 @@
 
 ---
 
-## 5. [[Gerenciamento de Serviços e Processos]]
-- Iniciar/parar/reiniciar: `systemctl start|stop|restart serviço`
-- Habilitar no boot: `systemctl enable serviço`
-- Ver status: `systemctl status serviço`
-- Processos ativos: `ps aux`, `pgrep`, `htop`
-- Encerrar processos: `kill -9 PID`
-
----
-
-## 6. [[Gerenciamento de Usuários e Segurança]]
+## 5. [[Gerenciamento de Usuários e Segurança]]
 - Usuários: `useradd`, `userdel`, `passwd`
 - Grupos: `groupadd`, `usermod -aG`
 - Permissões: `chmod`, `chown`, `umask`
 - Acesso root: `sudo`, `/etc/sudoers`
 - Chaves SSH: `ssh-keygen`, `ssh-copy-id`
 - Segurança básica: restringir login root via SSH, boas práticas de senha
-
----
-
-## 7. [[Armazenamento e Filesystem]]
-- Discos e partições: `lsblk`, `fdisk -l`
-- Montagem: `mount`, `umount`, `/etc/fstab`
-- Espaço em disco: `df -h`, `du -sh`
-- Links: `ln` (hardlink), `ln -s` (symlink)
-- Permissões no filesystem: leitura/escrita/execução para `user/group/others`

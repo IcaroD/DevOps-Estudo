@@ -65,7 +65,7 @@ echo $PWD    # diretório atual
 
 ---
 
-### Estruturas de controle
+### 5. Estruturas de controle
 
 `if`
 ```bash
@@ -113,5 +113,60 @@ done
 
 `while`
 ```bash
+count=1
+while [ $count -le 3 ]; do
+  echo "Contando: $count"
+  ((count++))
+done
+```
+`case`
+```bash
+read -p "Digite uma opção (a/b): " opcao
+case $opcao in
+  a) echo "Você escolheu A" ;;
+  b) echo "Você escolheu B" ;;
+  *) echo "Opção inválida" ;;
+esac
+```
 
+---
+
+### 6. Redirecionamentos
+
+Controlam entrada e saída dos comandos.
+
+**`>`: Sobrescreve no arquivo**
+```bash
+echo "Log inicial" > log.txt
+```
+**`>>`: Adiciona no final do arquivo**
+```bash
+echo "Nova linha" >> log.txt
+```
+**`<`: usa arquivo como entrada**
+```bash
+sort < lista.txt
+```
+**`|`(pipe): Encadeia comandos**
+```bash
+ls -lh | grep ".txt"
+```
+
+---
+
+### 7. Automação de tarefas (backup, limpeza de logs, deploy simples)
+
+Shell scripts são muito usados para automação.
+
+```bash
+# Backup simples
+tar -czf backup_$(date +%F).tar.gz /home/usuario/documentos
+
+# Limpeza de logs
+find /var/log -type f -name "*.log" -delete
+
+# Deploy simples
+git pull origin main
+npm install
+pm2 restart app
 ```
