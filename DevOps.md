@@ -7,6 +7,5 @@ Conteúdo:
 - [[Nginx]]
 - [[AWS]]
 - [[PM2]]
-- [[Automação de documentação]].
 
 Para consulta: [Roadmap](https://roadmap.sh/devops)
