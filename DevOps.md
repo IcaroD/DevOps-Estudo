@@ -3,7 +3,6 @@ O objetivo da capacitação em DevOps e Deploy é capacitar os membros da IN Jun
 Conteúdo:
 - [[Linux para DevOps]]  
 - [[CI-CD]]
-- [[Testes Automáticos]]
 - [[Docker]]
 - [[Nginx]]
 - [[AWS]]

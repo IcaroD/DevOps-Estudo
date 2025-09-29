@@ -51,6 +51,7 @@
 
 ---
 ### 7. Pipeline típico CI/CD
+
 1. **Commit** → dev envia código para o repositório.  
 2. **Build** → código é compilado, dependências instaladas.  
 3. **Testes** → testes unitários, integração, segurança.  
@@ -58,7 +59,7 @@
 5. **Deploy** → envia para staging ou produção automaticamente.  
 
 **Exemplo prático:**
-```yaml
+```yml
 name: CI/CD Pipeline
 
 # Dispara a pipeline em push ou pull request na branch main
@@ -75,11 +76,11 @@ jobs:
     steps:
       # 1. Clona o repositório
       - name: Checkout do código
-        uses: actions/checkout@v3
+        uses: actions/checkout@vx
 
       # 2. Configura o Node.js (poderia ser Python, Java, etc.)
       - name: Configurar Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@vx
         with:
           node-version: 'xx'
 
